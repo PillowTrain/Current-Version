@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://beean8strmt7d"]
+
+[ext_resource type="Texture2D" uid="uid://cd6ben347ib0b" path="res://Assets/Design/Icons/Card[LOOP_DE_LOOP].png" id="1_hrh78"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dxm6"]
+size = Vector2(218, 151)
+
+[node name="Deck" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(150, 710)
+rotation = 1.5708
+texture = ExtResource("1_hrh78")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(150, 710)
+shape = SubResource("RectangleShape2D_3dxm6")

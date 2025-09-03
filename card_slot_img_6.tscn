@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://k5k6gmmhwd5i"]
+
+[ext_resource type="Texture2D" uid="uid://cptyxlf3vc6jr" path="res://BGS/Fix.png" id="1_y0gae"]
+
+[node name="CardSlotImg2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(573, 669)
+texture = ExtResource("1_y0gae")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CardContainer" type="Node2D" parent="."]
+position = Vector2(573, 669)

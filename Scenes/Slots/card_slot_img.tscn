@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2sjwm5qt01wn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as877"]
+size = Vector2(250, 362.338)
+
+[node name="CardSlotImg" type="Sprite2D"]
+scale = Vector2(0.608, 0.601648)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.64474, 4.15525)
+shape = SubResource("RectangleShape2D_as877")

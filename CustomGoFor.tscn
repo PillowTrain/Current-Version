@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci10pkxwev557"]
+
+[ext_resource type="Texture2D" uid="uid://cmo7fdd86gnew" path="res://Custom go for.png" id="1_x50h3"]
+
+[node name="CustomGoFor" type="Node2D"]
+
+[node name="CustomGoForSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x50h3")
+
+[node name="CustomGoForArea2D" type="Area2D" parent="."]

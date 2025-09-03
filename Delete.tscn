@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://irw78kvtqj1b"]
+
+[ext_resource type="Texture2D" uid="uid://c5jo6kbtx6u6w" path="res://Delete.png" id="1_xiytl"]
+
+[node name="Delete" type="Node2D"]
+
+[node name="DeleteSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xiytl")
+
+[node name="DeleteArea2D" type="Area2D" parent="."]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c10roc2fjga3g"]
+
+[ext_resource type="Texture2D" uid="uid://boubttco81d7t" path="res://Friendship.png" id="1_inp0y"]
+
+[node name="Friendship" type="Node2D"]
+
+[node name="FriendshipSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_inp0y")
+
+[node name="FriendshipArea2D" type="Area2D" parent="."]

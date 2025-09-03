@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmby8aln22x0x"]
+
+[ext_resource type="Texture2D" uid="uid://dinepoxlch7jn" path="res://Exchange.png" id="1_ca2qt"]
+
+[node name="Exchange" type="Node2D"]
+
+[node name="ExchangeSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ca2qt")
+
+[node name="ExchangeArea2D" type="Area2D" parent="."]

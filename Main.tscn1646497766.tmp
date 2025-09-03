@@ -1,0 +1,225 @@
+[gd_scene load_steps=28 format=3 uid="uid://y02itxdttg12"]
+
+[ext_resource type="Script" uid="uid://b3uv0as3metvw" path="res://main.gd" id="1_j4qnp"]
+[ext_resource type="Script" uid="uid://byr448uduy6tj" path="res://card_manager.gd" id="1_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://blipdr4rs81hk" path="res://BGS/Chain.png" id="2_kjvhd"]
+[ext_resource type="Script" uid="uid://c0guxsyie3r10" path="res://player_hand.gd" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bjqipv2lfvg50" path="res://card_slot.tscn" id="3_cm0pq"]
+[ext_resource type="FontFile" uid="uid://nh2kollpwinu" path="res://Cards1-11/Munro.ttf" id="4_5tuhn"]
+[ext_resource type="PackedScene" uid="uid://fljxq4fxoosw" path="res://Cards1-11/Card1.tscn" id="4_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://dtwyqlqnxd2ig" path="res://BGS/textures[+]/Score.png" id="5_3b0ty"]
+[ext_resource type="PackedScene" uid="uid://beean8strmt7d" path="res://deck.tscn" id="5_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://bvke64wyu2lxe" path="res://BGS/textures[+]/Bet.png" id="6_bg4s2"]
+[ext_resource type="Script" uid="uid://dkyxxgchwonsr" path="res://deck.gd" id="6_lgr22"]
+[ext_resource type="Script" uid="uid://dn2e5txn0m0nc" path="res://input_manager.gd" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://dwuw31kdmyq74" path="res://deck_ex.tscn" id="8_trn2v"]
+[ext_resource type="Script" uid="uid://cqtr1qjvgnrk5" path="res://opponent_hand.gd" id="9_03owx"]
+[ext_resource type="Texture2D" uid="uid://kmwisb47xf81" path="res://EXPORTS[150x218]/Card[Checkered].png" id="12_5vvyt"]
+[ext_resource type="Script" uid="uid://dwjseorosng3i" path="res://popup_panel.gd" id="13_fpfj3"]
+[ext_resource type="Texture2D" uid="uid://chbctbsd14u30" path="res://close-window.png" id="14_fpfj3"]
+[ext_resource type="Script" uid="uid://dq1k2adhv66g" path="res://item_list.gd" id="14_sc1dx"]
+[ext_resource type="Script" uid="uid://bxknq3nlayxly" path="res://action_box.gd" id="15_hhcpw"]
+[ext_resource type="AudioStream" uid="uid://jto8v7sa58ju" path="res://Cards1-11/Mellow-Mind_Looping.mp3" id="21_devvj"]
+[ext_resource type="PackedScene" uid="uid://bd2fl3g3agr4b" path="res://settiding.tscn" id="22_hhcpw"]
+[ext_resource type="PackedScene" uid="uid://buvwot7l1se27" path="res://EXPORTS[150x218]/Settings.2.tscn" id="23_mxvw5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhcpw"]
+texture = ExtResource("5_3b0ty")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxvw5"]
+texture = ExtResource("5_3b0ty")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xrxkg"]
+content_margin_left = 28.0
+texture = ExtResource("5_3b0ty")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sqvbp"]
+texture = ExtResource("5_3b0ty")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hri7i"]
+texture = ExtResource("6_bg4s2")
+
+[node name="Main" type="Node2D"]
+position = Vector2(9, 2)
+script = ExtResource("1_j4qnp")
+
+[node name="Chain" type="Sprite2D" parent="."]
+position = Vector2(950, 540)
+scale = Vector2(1, 1.01481)
+texture = ExtResource("2_kjvhd")
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="CardManager" type="Node2D" parent="Cards"]
+position = Vector2(-9, -2)
+script = ExtResource("1_uu6xs")
+
+[node name="Label" type="Label" parent="Cards/CardManager"]
+offset_left = 1444.0
+offset_top = 873.0
+offset_right = 1687.0
+offset_bottom = 987.0
+theme_override_colors/font_color = Color(0.672313, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5tuhn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_hhcpw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Cards/CardManager"]
+offset_left = 227.0
+offset_top = 109.0
+offset_right = 480.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.672313, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5tuhn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_mxvw5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Cards/CardManager"]
+offset_left = 70.0
+offset_top = 456.0
+offset_right = 232.0
+offset_bottom = 538.0
+theme_override_fonts/font = ExtResource("4_5tuhn")
+theme_override_font_sizes/font_size = 50
+
+[node name="Label4" type="Label" parent="Cards/CardManager"]
+offset_left = 1605.0
+offset_top = 590.0
+offset_right = 1868.0
+offset_bottom = 701.0
+theme_override_fonts/font = ExtResource("4_5tuhn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_xrxkg")
+text = "Score: 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Cards/CardManager"]
+offset_left = 1600.0
+offset_top = 294.0
+offset_right = 1866.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("4_5tuhn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_sqvbp")
+text = "Score: 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Cards/CardManager"]
+offset_left = 1610.0
+offset_top = 445.0
+offset_right = 1747.0
+offset_bottom = 562.0
+theme_override_fonts/font = ExtResource("4_5tuhn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_hri7i")
+text = "Bet: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Card1" parent="Cards" instance=ExtResource("4_cm0pq")]
+visible = false
+position = Vector2(1805, 384)
+
+[node name="PlayerHand" type="Node2D" parent="Cards"]
+position = Vector2(-9, -2)
+script = ExtResource("2_r0du0")
+
+[node name="CardSlot" parent="Cards" instance=ExtResource("3_cm0pq")]
+position = Vector2(-9, -2)
+
+[node name="Deck" parent="Cards" instance=ExtResource("5_3dxm6")]
+position = Vector2(-9, -2)
+script = ExtResource("6_lgr22")
+
+[node name="NewRound" type="Button" parent="Cards/Deck"]
+offset_left = 41.0
+offset_top = 915.0
+offset_right = 315.0
+offset_bottom = 992.0
+theme_override_font_sizes/font_size = 50
+text = "NewRound"
+
+[node name="InputManager" type="Node2D" parent="Cards"]
+position = Vector2(-9, -2)
+script = ExtResource("7_lgr22")
+
+[node name="OpponentHand" type="Node2D" parent="Cards"]
+script = ExtResource("9_03owx")
+
+[node name="DeckEx" parent="Cards" instance=ExtResource("8_trn2v")]
+script = ExtResource("15_hhcpw")
+
+[node name="ModalWindow" type="PopupPanel" parent="Cards"]
+size = Vector2i(608, 1092)
+script = ExtResource("13_fpfj3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cards/ModalWindow"]
+custom_minimum_size = Vector2(600, 1080)
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 604.0
+offset_bottom = 1088.0
+
+[node name="BoxContainer" type="BoxContainer" parent="Cards/ModalWindow/VBoxContainer"]
+custom_minimum_size = Vector2(600, 136)
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Cards/ModalWindow/VBoxContainer/BoxContainer"]
+layout_mode = 2
+icon = ExtResource("14_fpfj3")
+
+[node name="BoxContainer2" type="BoxContainer" parent="Cards/ModalWindow/VBoxContainer"]
+custom_minimum_size = Vector2(600, 944)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Cards/ModalWindow/VBoxContainer/BoxContainer2"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="ItemList" type="ItemList" parent="Cards/ModalWindow/VBoxContainer/BoxContainer2/ScrollContainer"]
+layout_mode = 2
+auto_width = true
+auto_height = true
+max_columns = 3
+fixed_column_width = 150
+fixed_icon_size = Vector2i(150, 218)
+script = ExtResource("14_sc1dx")
+
+[node name="MenuButton" type="MenuButton" parent="Cards"]
+offset_left = 1711.0
+offset_top = 775.0
+offset_right = 1869.0
+offset_bottom = 1001.0
+icon = ExtResource("12_5vvyt")
+
+[node name="Node2D" parent="." instance=ExtResource("22_hhcpw")]
+position = Vector2(1773, 109)
+
+[node name="Settings" parent="Node2D" instance=ExtResource("23_mxvw5")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_devvj")
+volume_db = 2.334
+autoplay = true
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 1774.0
+offset_top = 1128.0
+offset_right = 1957.0
+offset_bottom = 1205.0
+theme_override_font_sizes/font_size = 50
+text = "Restart"
+
+[connection signal="pressed" from="Cards/Deck/NewRound" to="Cards/Deck" method="_on_new_round_pressed"]
+[connection signal="pressed" from="Cards/ModalWindow/VBoxContainer/BoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="item_clicked" from="Cards/ModalWindow/VBoxContainer/BoxContainer2/ScrollContainer/ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="item_clicked" from="Cards/ModalWindow/VBoxContainer/BoxContainer2/ScrollContainer/ItemList" to="Cards/ModalWindow/VBoxContainer/BoxContainer2/ScrollContainer/ItemList" method="_on_item_clicked"]
+[connection signal="pressed" from="Cards/MenuButton" to="." method="_on_open_modal_button_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

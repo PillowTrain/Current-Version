@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfo1h0ml6ct4y"]
+
+[ext_resource type="Script" uid="uid://dp3qj2h1ke25v" path="res://Draw10.gd" id="1_n4yrc"]
+[ext_resource type="Texture2D" uid="uid://5ucbuwmuh5fu" path="res://Draw 10.png" id="1_upid6"]
+
+[node name="Draw10" type="Node2D"]
+script = ExtResource("1_n4yrc")
+
+[node name="Draw10Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_upid6")
+
+[node name="Draw10Area2D" type="Area2D" parent="."]

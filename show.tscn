@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtlnokwgm8tqv"]
+
+[ext_resource type="Texture2D" uid="uid://bmrmoor03dmvy" path="res://Cards1-11/Card[Checkered].png" id="1_jv3uo"]
+[ext_resource type="Script" uid="uid://cdu6xtuoxcf43" path="res://show.gd" id="1_rojsl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv3uo"]
+size = Vector2(150, 218)
+
+[node name="Show" type="Node2D"]
+script = ExtResource("1_rojsl")
+
+[node name="Card[checkered]" type="Sprite2D" parent="."]
+position = Vector2(1709, 906)
+texture = ExtResource("1_jv3uo")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1709, 906)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_jv3uo")

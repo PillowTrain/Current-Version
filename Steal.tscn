@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ekpyimjg8hed"]
+
+[ext_resource type="Texture2D" uid="uid://dq6mn4qvjtlxa" path="res://Steal.png" id="1_fuktn"]
+
+[node name="Steal" type="Node2D"]
+
+[node name="StealSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fuktn")
+
+[node name="StealArea2D" type="Area2D" parent="."]

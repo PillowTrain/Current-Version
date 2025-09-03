@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b344efc4se35r"]
+
+[ext_resource type="Texture2D" uid="uid://i6npfw5k1mwn" path="res://Draw 1.png" id="1_cpoqc"]
+[ext_resource type="Script" uid="uid://dcartfe848rig" path="res://Draw1.gd" id="1_jxaff"]
+
+[node name="Draw1" type="Node2D"]
+script = ExtResource("1_jxaff")
+
+[node name="Draw1Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cpoqc")
+
+[node name="Draw1Area2D" type="Area2D" parent="."]

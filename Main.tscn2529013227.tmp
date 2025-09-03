@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=3 uid="uid://y02itxdttg12"]
+
+[ext_resource type="Script" uid="uid://byr448uduy6tj" path="res://card_manager.gd" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://c0guxsyie3r10" path="res://player_hand.gd" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bjqipv2lfvg50" path="res://card_slot.tscn" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://fljxq4fxoosw" path="res://Cards1-11/Card1.tscn" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://beean8strmt7d" path="res://deck.tscn" id="5_3dxm6"]
+[ext_resource type="Script" uid="uid://dkyxxgchwonsr" path="res://deck.gd" id="6_lgr22"]
+[ext_resource type="Script" uid="uid://dn2e5txn0m0nc" path="res://input_manager.gd" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://dwuw31kdmyq74" path="res://deck_ex.tscn" id="8_trn2v"]
+[ext_resource type="Script" uid="uid://bd86peygtet2t" path="res://deck_ex.gd" id="9_20pc6"]
+[ext_resource type="PackedScene" uid="uid://dtlnokwgm8tqv" path="res://show.tscn" id="10_wkp8b"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(9, 2)
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="CardManager" type="Node2D" parent="Cards"]
+position = Vector2(-9, -2)
+script = ExtResource("1_uu6xs")
+
+[node name="Card1" parent="Cards" instance=ExtResource("4_cm0pq")]
+visible = false
+position = Vector2(767, 939)
+
+[node name="PlayerHand" type="Node2D" parent="Cards"]
+position = Vector2(-9, -2)
+script = ExtResource("2_r0du0")
+
+[node name="CardSlot" parent="Cards" instance=ExtResource("3_cm0pq")]
+position = Vector2(-9, -2)
+
+[node name="Deck" parent="Cards" instance=ExtResource("5_3dxm6")]
+position = Vector2(-9, -2)
+script = ExtResource("6_lgr22")
+
+[node name="InputManager" type="Node2D" parent="Cards"]
+position = Vector2(-9, -2)
+script = ExtResource("7_lgr22")
+
+[node name="DeckEx" parent="Cards" instance=ExtResource("8_trn2v")]
+script = ExtResource("9_20pc6")
+
+[node name="PopupPanel" type="PopupPanel" parent="Cards"]
+position = Vector2i(40, 0)
+size = Vector2i(400, 800)
+visible = true
+
+[node name="GridContainer" type="GridContainer" parent="Cards/PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 396.0
+offset_bottom = 796.0
+
+[node name="Show" parent="Cards" instance=ExtResource("10_wkp8b")]

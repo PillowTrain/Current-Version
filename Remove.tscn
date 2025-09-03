@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d10mjsrtaiawe"]
+
+[ext_resource type="Texture2D" uid="uid://jlbfjs3cc42q" path="res://Remove.png" id="1_hi386"]
+
+[node name="Remove" type="Node2D"]
+
+[node name="RemoveSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hi386")
+
+[node name="RemoveArea2D" type="Area2D" parent="."]

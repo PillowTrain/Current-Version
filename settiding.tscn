@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd2fl3g3agr4b"]
+
+[ext_resource type="Script" uid="uid://d3ewejruj36dy" path="res://settiding.gd" id="1_4mr87"]
+[ext_resource type="Script" uid="uid://chh8sxt5gmoka" path="res://area_2d.gd" id="2_2m6kh"]
+[ext_resource type="Texture2D" uid="uid://vtbx57yjlvyu" path="res://BGS/textures[+]/128x128[Pressed].png" id="2_4mr87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_261kt"]
+size = Vector2(128, 128)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4mr87")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_2m6kh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_4mr87")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_261kt")

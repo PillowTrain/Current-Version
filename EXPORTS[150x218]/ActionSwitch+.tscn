@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cettiiqmn6jw1"]
+
+[ext_resource type="Texture2D" uid="uid://bxmg3vd4i8yhe" path="res://Action switch+.png" id="1_4nm8c"]
+[ext_resource type="Script" uid="uid://uwclitn2klk4" path="res://ActionSwitch+.gd" id="1_uv54a"]
+
+[node name="ActionSwitch+" type="Node2D"]
+script = ExtResource("1_uv54a")
+
+[node name="ActionSwitch+Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4nm8c")
+
+[node name="ActionSwitch+Area2D" type="Area2D" parent="."]

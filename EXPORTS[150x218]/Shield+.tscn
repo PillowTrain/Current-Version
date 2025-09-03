@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://s88c1o7ikb35"]
+
+[ext_resource type="Script" uid="uid://cotqen0odmufe" path="res://Shield+.gd" id="1_1xgbu"]
+[ext_resource type="Texture2D" uid="uid://jhg48ysmcrji" path="res://Shield +.png" id="2_dewh3"]
+
+[node name="Shield+" type="Node2D"]
+script = ExtResource("1_1xgbu")
+
+[node name="Shield+Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dewh3")
+
+[node name="Shield+Area2D" type="Area2D" parent="."]

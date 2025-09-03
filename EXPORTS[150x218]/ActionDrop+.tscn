@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://gg4l6d3px661"]
+
+[ext_resource type="Script" uid="uid://bqxkhrjdfcejw" path="res://ActionDrop+.gd" id="1_dybyy"]
+[ext_resource type="Texture2D" uid="uid://bfg4qyx0wsigj" path="res://EXPORTS[150x218]/Action drop +.png" id="2_tag0c"]
+
+[node name="ActionDrop+" type="Node2D"]
+script = ExtResource("1_dybyy")
+
+[node name="ActionDropSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tag0c")
+
+[node name="ActionDropArea2D" type="Area2D" parent="."]

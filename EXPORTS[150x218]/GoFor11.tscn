@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://gqegronqymsh"]
+
+[ext_resource type="Texture2D" uid="uid://b3q51k4fwdaqc" path="res://Go for 11.png" id="1_eymkp"]
+[ext_resource type="Script" uid="uid://65k7rxtgxqt7" path="res://GoFor11.gd" id="1_ivldj"]
+
+[node name="GoFor11" type="Node2D"]
+script = ExtResource("1_ivldj")
+
+[node name="GoFor11Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_eymkp")
+
+[node name="GoFor11Area2D" type="Area2D" parent="."]

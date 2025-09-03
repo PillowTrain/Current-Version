@@ -1,0 +1,42 @@
+[gd_scene load_steps=13 format=3 uid="uid://bjqipv2lfvg50"]
+
+[ext_resource type="Script" uid="uid://bpwed5xjq3nh7" path="res://card_slot.gd" id="1_jmuc5"]
+[ext_resource type="PackedScene" uid="uid://k5k6gmmhwd5i" path="res://card_slot_img_6.tscn" id="3_hwqxk"]
+[ext_resource type="PackedScene" uid="uid://drwthunnb2k6" path="res://card_slot_img_7.tscn" id="4_as877"]
+[ext_resource type="PackedScene" uid="uid://k5k6gmmhwd5i" path="res://card_slot_img_6.tscn" id="5_8rk8i"]
+[ext_resource type="PackedScene" uid="uid://yag22olh77bx" path="res://card_slot_img_1.tscn" id="6_630yp"]
+[ext_resource type="PackedScene" uid="uid://4ovsh8a28w2l" path="res://card_slot_img_3.tscn" id="6_liqma"]
+[ext_resource type="PackedScene" uid="uid://bqkpn7vagpmq7" path="res://card_slot_img_4.tscn" id="7_aghb0"]
+[ext_resource type="PackedScene" uid="uid://brmneg81ps1pg" path="res://card_slot_img_5.tscn" id="8_350oo"]
+[ext_resource type="PackedScene" uid="uid://dqubcs6i3xu73" path="res://card_slot_img_8.tscn" id="9_liqma"]
+[ext_resource type="PackedScene" uid="uid://fx61g2bayrof" path="res://card_slot_img_9.tscn" id="10_aghb0"]
+[ext_resource type="PackedScene" uid="uid://bjrk0payfy03h" path="res://card_slot_img_10.tscn" id="11_aghb0"]
+[ext_resource type="PackedScene" uid="uid://i7vod5t2mf05" path="res://EXPORTS[150x218]/destroy.tscn" id="12_350oo"]
+
+[node name="CardSlot" type="Node2D"]
+position = Vector2(-20, -19)
+script = ExtResource("1_jmuc5")
+
+[node name="CardSlotImg11" parent="." instance=ExtResource("6_630yp")]
+position = Vector2(0, 1)
+
+[node name="CardSlotImg21" parent="." instance=ExtResource("3_hwqxk")]
+
+[node name="CardSlotImg22" parent="." instance=ExtResource("4_as877")]
+
+[node name="CardSlotImg12" parent="." instance=ExtResource("5_8rk8i")]
+
+[node name="CardSlotImg13" parent="." instance=ExtResource("6_liqma")]
+
+[node name="CardSlotImg14" parent="." instance=ExtResource("7_aghb0")]
+
+[node name="CardSlotImg15" parent="." instance=ExtResource("8_350oo")]
+
+[node name="CardSlotImg23" parent="." instance=ExtResource("9_liqma")]
+
+[node name="CardSlotImg24" parent="." instance=ExtResource("10_aghb0")]
+
+[node name="CardSlotImg25" parent="." instance=ExtResource("11_aghb0")]
+
+[node name="Destroy" parent="." instance=ExtResource("12_350oo")]
+visible = false

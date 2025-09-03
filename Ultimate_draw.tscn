@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://jdl6furvkno1"]
+
+[ext_resource type="Texture2D" uid="uid://dqbpcjky08eao" path="res://Ultimate Draw.png" id="1_pc3it"]
+
+[node name="UltimateDraw" type="Node2D"]
+
+[node name="UltimateDrawSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pc3it")
+
+[node name="UltimateDrawArea2D" type="Area2D" parent="."]

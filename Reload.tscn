@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbwk4qvyntobr"]
+
+[ext_resource type="Texture2D" uid="uid://sht61cg6pfsp" path="res://Reload.png" id="1_7dvaq"]
+
+[node name="Reload" type="Node2D"]
+
+[node name="ReloadSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7dvaq")
+
+[node name="ReloadArea2D" type="Area2D" parent="."]

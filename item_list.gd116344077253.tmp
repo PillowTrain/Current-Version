@@ -1,0 +1,40 @@
+extends ItemList
+
+@onready var action = $"../../../../../DeckEx"	
+@onready var card_slot = $"../../../../../CardSlot"
+@onready var deck = $"../../../../../Deck"
+@onready var item_list = self
+
+
+
+func _on_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
+	print(index)
+	print(get_item_text(index).replace(" ", "_"))
+
+	var card_text = get_item_text(index)
+	var method_name = card_text.to_lower() \
+		.replace(" ", "_") \
+		.replace("++", "_plus_plus") \
+		.replace("+", "_plus")
+
+
+
+	var item_text = get_item_text(index)
+	var camel_case_name = item_text.capitalize()
+	var scene_path = "res://EXPORTS[150x218]/" + camel_case_name.replace(" ", "") + ".tscn"
+	print(scene_path)
+
+	var new_card = card_slot.add_card(scene_path)
+	if new_card:
+		#присвоєння вузла для змінної
+		if new_card.has_method("deck"):
+			new_card.deck = deck
+		if new_card.has_method("action"):
+			new_card.action = action
+		if new_card.has_method(item_list):
+			new_card.item_list = item_list
+		card_slot.card_instances.append(new_card)
+		if new_card.has_method("activate"):
+			new_card.activate()
+	
+	remove_item(index)

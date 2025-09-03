@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp2wmbxysr3dh"]
+
+[ext_resource type="Texture2D" uid="uid://dh3ft32t7mu37" path="res://Draw 6.png" id="1_axqkk"]
+[ext_resource type="Script" uid="uid://c1pgh1hcxgxch" path="res://Draw6.gd" id="1_mg2kd"]
+
+[node name="Draw6" type="Node2D"]
+script = ExtResource("1_mg2kd")
+
+[node name="Draw6Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_axqkk")
+
+[node name="Draw6Area2D" type="Area2D" parent="."]

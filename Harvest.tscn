@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://du3aomptjk112"]
+
+[ext_resource type="Texture2D" uid="uid://fbmwdga6e7tj" path="res://Harvest.png" id="1_bgkmi"]
+
+[node name="Harvest" type="Node2D"]
+
+[node name="HarvestSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bgkmi")
+
+[node name="HarvestArea2D" type="Area2D" parent="."]

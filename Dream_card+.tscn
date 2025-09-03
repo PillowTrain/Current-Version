@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://sjuy5yhrhebw"]
+
+[ext_resource type="Texture2D" uid="uid://s5h5c1getspo" path="res://Dream card +.png" id="1_tplm6"]
+
+[node name="DreamCard+" type="Node2D"]
+
+[node name="DreamCard+Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tplm6")
+
+[node name="DreamCard+Area2D" type="Area2D" parent="."]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfrhdpiavygrt"]
+
+[ext_resource type="Texture2D" uid="uid://de80ra40ucim" path="res://Forced draw.png" id="1_lvcpa"]
+
+[node name="ForcedDraw" type="Node2D"]
+
+[node name="ForcedDrawSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lvcpa")
+
+[node name="ForsedDrawArea2D" type="Area2D" parent="."]
